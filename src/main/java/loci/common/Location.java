@@ -96,6 +96,7 @@ public class Location {
   private boolean isURL = true;
   private URL url;
   private File file;
+  private boolean legacy = true;
 
   // -- Constructors --
 
@@ -133,6 +134,10 @@ public class Location {
   }
 
   // -- Location API methods --
+
+  public void setLegacyParentBehavior(boolean value) {
+    legacy = value;
+  }
 
   /**
    * Clear all caches and reset cache-related bookkeeping variables to their
@@ -621,7 +626,7 @@ public class Location {
   /* @see java.io.File#getParentFile() */
   public Location getParentFile() {
     String parent = this.getParent();
-    if (parent == null) return null;
+    if (!legacy && parent == null) return null;
     return new Location(parent);
   }
 

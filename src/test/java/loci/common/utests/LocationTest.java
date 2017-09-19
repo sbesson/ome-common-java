@@ -177,11 +177,23 @@ public class LocationTest {
     }
   }
   
+  @Test(expectedExceptions = NullPointerException.class)
+  public void testParentNullLegacy1() {
+    Location nullParent = new Location((String) null, "").getParentFile();
+  }
+
+  @Test(expectedExceptions = NullPointerException.class)
+  public void testParentNullLegacy2() {
+    Location nullParent = new Location((Location) null, "").getParentFile();
+  }
+
   @Test
   public void testParentNull() {
     Location nullParent = new Location((String) null, "nullParentFile");
+    nullParent.setLegacyParentBehavior(false);
     assertNull(nullParent.getParentFile());
     nullParent = new Location((Location) null, "nullParentFile");
+    nullParent.setLegacyParentBehavior(false);
     assertNull(nullParent.getParentFile());
   }
 
