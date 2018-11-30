@@ -670,7 +670,7 @@ public class RandomAccessInputStream extends InputStream implements DataInput, C
     return raf.skipBytes(n);
   }
 
-  /** Skip n bytes within the stream. */
+  /* @see IRandomAccess#skipBytes(int) */
   public long skipBytes(long n) throws IOException {
     return raf.skipBytes(n);
   }

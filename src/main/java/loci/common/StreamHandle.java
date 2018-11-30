@@ -343,7 +343,7 @@ public abstract class StreamHandle implements IRandomAccess {
     return (int) skipBytes((long) n);
   }
 
-  /* @see #skipBytes(int) */
+  /* @see IRandomAccess#skipBytes(int) */
   @Override
   public long skipBytes(long n) throws IOException {
     long skipped = 0;
