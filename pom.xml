@@ -305,7 +305,8 @@
              appears in the <reporting> section, and must be kept in sync. -->
         <version>3.0.1</version>
         <configuration>
-          <failOnError>false</failOnError>
+          <failOnError>true</failOnError>
+          <failOnWarnings>true</failOnWarnings>
           <links>
             <link>http://docs.oracle.com/javase/8/docs/api/</link>
           </links>
