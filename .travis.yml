@@ -17,6 +17,8 @@ jdk:
 before_script:
   - cd location-server && ./start-location.sh && cd ..
 
+install: mvn install -DskipTests=true
+
 script:
   - mvn test -B -Dtestng.runHttpRemoteTests=1 -Dtestng.runS3RemoteTests=1
 

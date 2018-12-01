@@ -67,11 +67,10 @@ import org.slf4j.LoggerFactory;
  *
  * <p>The decompression requires large amounts of memory.  Thus you
  * should call the {@link #close() close()} method as soon as
- * possible, to force <tt>CBZip2InputStream</tt> to release the
- * allocated memory.  See <tt>CBZip2OutputStream</tt>
- * for information about memory usage.</p>
+ * possible, to force CBZip2InputStream to release the
+ * allocated memory.</p>
  *
- * <p><tt>CBZip2InputStream</tt> reads bytes from the compressed
+ * <p>CBZip2InputStream reads bytes from the compressed
  * source stream via the single byte {@link java.io.InputStream#read() read()}
  * method exclusively.  Thus you should consider using a buffered source stream.
  * </p>
@@ -232,7 +231,7 @@ public class CBZip2InputStream extends InputStream {
    * the specified stream.
    *
    * <p>Although BZip2 headers are marked with the magic
-   * <tt>"Bz"</tt> this constructor expects the next byte in the
+   * {@code "Bz"} this constructor expects the next byte in the
    * stream to be the first one after the magic.  Thus callers have
    * to skip the first two bytes. Otherwise this constructor will
    * throw an exception. </p>
@@ -242,7 +241,7 @@ public class CBZip2InputStream extends InputStream {
    * @throws IOException
    *   if the stream content is malformed or an I/O error occurs.
    * @throws NullPointerException
-   *   if <tt>in == null</tt>
+   *   if {@code in == null}
    */
   public CBZip2InputStream(final InputStream in) throws IOException {
     super();
