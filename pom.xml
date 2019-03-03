@@ -303,7 +303,7 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <!-- NB: The same version declaration and configuration block also
              appears in the <reporting> section, and must be kept in sync. -->
-        <version>3.0.1</version>
+        <version>3.1.0</version>
         <configuration>
           <failOnError>true</failOnError>
           <failOnWarnings>true</failOnWarnings>
