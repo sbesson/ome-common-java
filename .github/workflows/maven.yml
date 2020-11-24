@@ -28,5 +28,9 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+      - name: Start location server
+        if: ${{ os == 'ubuntu-latest' }}
+        run: ./start-location.sh
+        working-directory: location-server
       - name: Build
         run: mvn install
