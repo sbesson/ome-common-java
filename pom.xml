@@ -477,20 +477,18 @@
       <activation>
         <jdk>(,11)</jdk>
       </activation>
-      <property>
-        <name>testng.version</name>
-        <value>7.5</name>
-      </property>
+      <properties>
+        <testng.version>7.5</testng.version>
+      </properties>
     </profile>
     <profile>
       <id>jdk11+</id>
       <activation>
         <jdk>[11,)</jdk>
       </activation>
-      <property>
-        <name>testng.version</name>
-        <value>7.9.0</name>
-      </property>
+      <properties>
+        <testng.version>7.9.0</testng.version>
+      </properties>
     </profile>
   </profiles>
 </project>
